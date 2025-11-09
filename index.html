@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Guía oficial del Parque Nacional Altamira: rutas, fauna, flora y planificación de visitas.">
+  <title>Parque Nacional Altamira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ovo&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <header class="header" id="inicio">
+    <div class="container">
+      <div class="barra">
+        <a class="logo" href="#inicio">
+          <img src="./images/logo.png" alt="Logo del Parque Nacional Altamira" class="logo-img">
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Alternar menú">
+        <label for="menu-toggle" class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="navegacion">
+          <a href="#inicio" class="navegacion_enlace">Inicio</a>
+          <a href="#rutas" class="navegacion_enlace">Rutas</a>
+          <a href="#fauna" class="navegacion_enlace">Fauna & Flora</a>
+          <a href="#contacto" class="navegacion_enlace">Contacto</a>
+        </nav>
+        <label for="menu-toggle" class="menu-overlay"></label>
+      </div>
+    </div>
+
+    <div class="hero-collage">
+      <div class="hero-item"><img src="./images/hero1.jpg" alt="Mirador del Cóndor al amanecer"></div>
+      <div class="hero-item"><img src="./images/hero2.jpg" alt="Cañón del Río Claro"></div>
+      <div class="hero-item"><img src="./images/hero3.jpg" alt="Floración de puya raimondi"></div>
+      <div class="hero-item"><img src="./images/hero4.jpg" alt="Lago Esmeralda en Altamira"></div>
+    </div>
+
+    <div class="hero-overlay">
+      <h2 class="no-margin">Descubre la grandeza silvestre</h2>
+      <a class="btn-cta" href="#contacto">Planifica tu visita</a>
+      <p><small>* Entrada gratuita los domingos</small></p>
+    </div> 
+  </header>
+  
+  <section id="rutas" class="rightdesign">
+    <img src="./images/mirador.jpg" alt="Vista panorámica desde el Mirador del Cóndor">
+    <div class="content-wrapper">
+      <span>RUTAS DESTACADAS</span>
+      <h2>Mirador del Cóndor: amanecer entre nubes</h2>
+      <p>Sendero de dificultad fácil (2 km ida y vuelta), ideal para familias y fotógrafos. Parte desde el Centro de Visitantes y culmina en un mirador a 2,800 msnm con vistas al valle andino.</p>
+      <p>Recomendado llevar agua, bloqueador solar y binoculares para avistamiento de aves.</p>
+
+      <h3 class="tabla-titulo">Comparativa de rutas principales</h3>
+      <h4 class="ruta-table-caption">Rutas oficiales del Parque Nacional Altamira (2025)</h4>
+      <table class="ruta-table">
+        <thead>
+          <tr>
+            <th scope="col">Ruta</th>
+            <th scope="col">Distancia</th>
+            <th scope="col">Dificultad</th>
+            <th scope="col">Tiempo estimado</th>
+            <th scope="col">Altitud máx.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Ruta">Mirador del Cóndor</td>
+            <td data-label="Distancia">2 km</td>
+            <td data-label="Dificultad">Clase 0</td>
+            <td data-label="Tiempo">2 h</td>
+            <td data-label="Altitud">2,800 msnm</td>
+          </tr>
+          <tr>
+            <td data-label="Ruta">Cañón del Río Claro</td>
+            <td data-label="Distancia">8 km</td>
+            <td data-label="Dificultad">Clase 1</td>
+            <td data-label="Tiempo">4 h</td>
+            <td data-label="Altitud">3,200 msnm</td>
+          </tr>
+          <tr>
+            <td data-label="Ruta">Cumbre Altamira</td>
+            <td data-label="Distancia">16 km</td>
+            <td data-label="Dificultad">Clase 2</td>
+            <td data-label="Tiempo">8 h</td>
+            <td data-label="Altitud">4,150 msnm</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="fauna" class="new-features">
+    <div class="container">
+      <div class="features-content">
+        <span>FAUNA Y FLORA</span>
+        <h2>Especies que podrás encontrar</h2>
+        <ul class="features-list">
+          <!-- Animales (6) -->
+          <li>
+            <figure>
+              <img src="./images/condor.png" alt="Cóndor Andino en vuelo">
+              <figcaption>Cóndor Andino</figcaption>
+            </figure>
+            <p>Ave nacional en peligro de extinción. Vuela en térmicas a más de 5,000 msnm.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/puma.png" alt="Puma escondido entre rocas">
+              <figcaption>Puma</figcaption>
+            </figure>
+            <p>Depredador tope. Avistamiento raro: principalmente al amanecer o atardecer.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/zorro.png" alt="Zorro culpeo andino">
+              <figcaption>Zorro Culpeo</figcaption>
+            </figure>
+            <p>El más grande de Sudamérica. Se alimenta de roedores y frutos silvestres.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/viscacha.png" alt="Viscacha andina en rocas">
+              <figcaption>Viscacha</figcaption>
+            </figure>
+            <p>Pariente del chinchilla. Vive en colonias en zonas rocosas por encima de los 3,000 msnm.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/aguila.png" alt="Águila mora volando">
+              <figcaption>Águila Mora</figcaption>
+            </figure>
+            <p>Rapaz de gran envergadura. Se alimenta de serpientes y pequeños mamíferos.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/suri.png" alt="Suri (ñandú andino) caminando">
+              <figcaption>Suri</figcaption>
+            </figure>
+            <p>Ave no voladora, endémica de la puna. En peligro por caza furtiva.</p>
+          </li>
+
+          <li>
+            <figure>
+              <img src="./images/puya.png" alt="Puya Raimondi con flores moradas">
+              <figcaption>Puya Raimondi</figcaption>
+            </figure>
+            <p>Florece cada 80–100 años. Atrae a cientos de aves y polinizadores durante su floración.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/quina.png" alt="Árbol de quina con corteza rojiza">
+              <figcaption>Quina</figcaption>
+            </figure>
+            <p>Árbol medicinal. Su corteza dio origen a la quinina, usada contra la malaria.</p>
+          </li>
+          <li>
+            <figure>
+              <img src="./images/romerillo.png" alt="Romerillo andino, arbusto bajo">
+              <figcaption>Romerillo</figcaption>
+            </figure>
+            <p>Arbusto aromático usado en rituales ancestrales y como repelente natural.</p>
+          </li>
+        </ul>
+        <audio controls class="audio-player">
+          <source src="./media/canto-condor.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+        <small class="audio-label">Grabación del grito del cóndor andino (Zona Mirador, 06:17 hrs)</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="leftdesign">
+    <img src="./images/canyon.jpg" alt="Cañón del Río Claro con paredes rocosas">
+    <div class="content-wrapper">
+      <span>EXPERIENCIA INMERSIVA</span>
+      <h2>Vuelo del cóndor: grabado en 4K</h2>
+      <p>Este video fue grabado por drones autorizados en colaboración con la Sociedad Ornitológica Andina.</p>
+
+      <video controls poster="./images/poster-video.jpg" class="video-player">
+        <source src="./media/condor-flight.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+      </video>
+
+      <ul class="stats-list">
+        <li><span class="stat-number">45+</span><br><small>km de senderos</small></li>
+        <li><span class="stat-number">12</span><br><small>especies registradas</small></li>
+        <li><span class="stat-number">97%</span><br><small>satisfacción visitantes</small></li>
+      </ul>
+
+      <ul class="testimonials-list">
+        <li>
+          <div class="stars">★★★★★</div>
+          <blockquote>“La ruta al Mirador del Cóndor fue una experiencia espiritual.”</blockquote>
+          <cite>— Ana M., Guía de montaña</cite>
+        </li>
+        <li>
+          <div class="stars">★★★★★</div>
+          <blockquote>“Capturé el cóndor en vuelo… un sueño cumplido.”</blockquote>
+          <cite>— Carlos R., Fotógrafo naturalista</cite>
+        </li>
+        <li>
+          <div class="stars">★★★★★</div>
+          <blockquote>“Perfecto para desconectar. ¡Mi familia y yo repetiremos!”</blockquote>
+          <cite>— Lucía T., Visitante</cite>
+        </li>
+        <li>
+          <div class="stars">★★★★★</div>
+          <blockquote>“El guía explicó cada planta y ave con pasión. Aprendí más en 4h que en un semestre.”</blockquote>
+          <cite>— Dr. Javier L., Biólogo</cite>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto" class="contact-us-section">
+    <div class="container">
+      <h2>Reserva tu visita guiada</h2>
+      <p>Selecciona fecha, hora y tus preferencias. Te contactaremos para confirmar.</p>
+
+      <form class="signup-form">
+        <div class="form-row">
+          <label for="nombre" class="sr-only">Nombre completo</label>
+          <input id="nombre" name="nombre" placeholder="NOMBRE COMPLETO" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email" class="sr-only">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="TU EMAIL" required>
+        </div>
+
+        <div class="form-row">
+          <label for="telefono" class="sr-only">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="TELÉFONO">
+        </div>
+
+        <div class="form-row">
+          <label for="fecha" class="sr-only">Fecha de visita</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="form-row">
+          <label for="hora" class="sr-only">Hora de entrada</label>
+          <input type="time" id="hora" name="hora" min="07:00" max="16:00" required>
+        </div>
+
+        <div class="form-row">
+          <label for="visitantes" class="sr-only">Número de visitantes</label>
+          <input type="number" id="visitantes" name="visitantes" min="1" max="20" step="1" placeholder="NÚM. VISITANTES" required>
+        </div>
+
+        <div class="form-row select-row">
+          <label for="ruta" class="sr-only">Ruta preferida</label>
+          <select id="ruta" name="ruta" required>
+            <option value="" disabled selected>RUTA PREFERIDA</option>
+            <option value="mirador">Mirador del Cóndor (Fácil)</option>
+            <option value="canyon">Cañón del Río Claro (Moderado)</option>
+            <option value="cumbre">Cumbre Altamira (Difícil)</option>
+          </select>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <input type="checkbox" id="guia" name="guia" value="si">
+          <label for="guia">Requiero guía certificado (+$100 MXN)</label>
+        </div>
+
+        <button type="submit">RESERVAR</button>
+      </form>
+
+      <p class="small-note">
+        Al reservar, aceptas nuestro <a href="#">reglamento de acceso</a> y políticas de cancelación (48h de anticipación).
+      </p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-col">
+        <h2>Parque Nacional Altamira</h2>
+        <p>📍 Carretera Andina km 112<br>📞 (555) 123-4567<br>✉️ info@altamira.gob.mx</p>
+      </div>
+
+      <div class="footer-col">
+        <h2>Enlaces rápidos</h2>
+        <ul>
+          <li><a href="#">Mapas PDF</a></li>
+          <li><a href="#">Reglamento</a></li>
+          <li><a href="#">Clima actual</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2>Horarios</h2>
+        <ul>
+          <li>Lun–Dom: 7:00–18:00</li>
+          <li>Entrada: $50 MXN</li>
+          <li>Domingos: entrada libre</li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h2>Newsletter</h2>
+        <form class="newsletter-form">
+          <label for="newsletter-email" class="sr-only">Correo para newsletter</label>
+          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="tu@email.com" required>
+          <button type="submit">→</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
