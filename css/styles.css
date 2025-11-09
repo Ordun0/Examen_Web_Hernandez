@@ -7,7 +7,7 @@
   --negro: #263238;
   --texto-secundario: #717171;
   --amarillo-fondo: #F2AE25;
-  --amarillo-oscuro: #d4920c; /* mejor contraste */
+  --amarillo-oscuro: #d4920c;
   --border-radius: 4px;
   --spacing-sm: 12px;
   --spacing-md: 24px;
@@ -82,6 +82,7 @@ img {
   min-height: 700px;
   color: white;
   overflow: hidden;
+  padding-top: 40px;
 }
 
 .hero-collage {
@@ -140,9 +141,15 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
-  position: relative;
-  z-index: 3;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(13, 71, 38, 0.92);
+  backdrop-filter: blur(4px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo img {
@@ -733,6 +740,7 @@ img {
 @media (min-width: 768px) {
   .barra { padding: 1.5rem 2rem; }
   .navegacion { gap: 4rem; }
+  .header { padding-top: 40px; }
   .features-list li { max-width: 220px; }
 }
 
