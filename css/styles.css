@@ -809,3 +809,75 @@ img {
 .btn-eliminar:hover {
   background-color: #c0392b;
 }
+
+/* Estilos para las rutas dinámicas */
+.ruta-loading {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.8rem;
+  color: var(--texto-secundario);
+}
+
+.rutas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ruta-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.ruta-card h4 {
+  margin: 0 0 1rem 0;
+  color: var(--secundario);
+  font-size: 1.8rem;
+}
+
+.ruta-card p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.ruta-card p strong {
+  color: var(--negro);
+}
+
+.ruta-dificultad {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-weight: 600;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.dificultad-0 {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.dificultad-1 {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.dificultad-2 {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.dificultad-3 {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.ruta-rating {
+  color: #ffd700;
+  font-weight: bold;
+}
