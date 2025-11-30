@@ -809,3 +809,53 @@ img {
 .btn-eliminar:hover {
   background-color: #c0392b;
 }
+
+.ruta-table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.ruta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.ruta-table thead tr {
+    background-color: #009688;
+    color: #ffffff;
+    text-align: left;
+}
+
+.ruta-table th,
+.ruta-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.ruta-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.ruta-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.ruta-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009688;
+}
+
+@media screen and (max-width: 600px) {
+    .ruta-table th,
+    .ruta-table td {
+        padding: 8px;
+        font-size: 0.8em;
+    }
+}
+
