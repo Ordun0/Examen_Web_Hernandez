@@ -30,7 +30,6 @@
           <a href="#rutas" class="navegacion_enlace">Rutas</a>
           <a href="#fauna" class="navegacion_enlace">Fauna & Flora</a>
           <a href="#registro" class="navegacion_enlace">Registro</a>
-          <a href="#contacto" class="navegacion_enlace">Contacto</a>
         </nav>
         <label for="menu-toggle" class="menu-overlay"></label>
       </div>
@@ -45,7 +44,7 @@
 
     <div class="hero-overlay">
       <h2 class="no-margin">Descubre la grandeza silvestre</h2>
-      <a class="btn-cta" href="#contacto">Planifica tu visita</a>
+      <a class="btn-cta" href="#registro">Planifica tu visita</a>
       <p><small>* Entrada gratuita los domingos</small></p>
     </div> 
   </header>
@@ -58,42 +57,11 @@
       <p>Sendero de dificultad fácil (2 km ida y vuelta), ideal para familias y fotógrafos. Parte desde el Centro de Visitantes y culmina en un mirador a 2,800 msnm con vistas al valle andino.</p>
       <p>Recomendado llevar agua, bloqueador solar y binoculares para avistamiento de aves.</p>
 
-      <h3 class="tabla-titulo">Comparativa de rutas principales</h3>
-      <h4 class="ruta-table-caption">Rutas oficiales del Parque Nacional Altamira (2025)</h4>
-      <table class="ruta-table">
-        <thead>
-          <tr>
-            <th scope="col">Ruta</th>
-            <th scope="col">Distancia</th>
-            <th scope="col">Dificultad</th>
-            <th scope="col">Tiempo estimado</th>
-            <th scope="col">Altitud máx.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Ruta">Mirador del Cóndor</td>
-            <td data-label="Distancia">2 km</td>
-            <td data-label="Dificultad">Clase 0</td>
-            <td data-label="Tiempo">2 h</td>
-            <td data-label="Altitud">2,800 msnm</td>
-          </tr>
-          <tr>
-            <td data-label="Ruta">Cañón del Río Claro</td>
-            <td data-label="Distancia">8 km</td>
-            <td data-label="Dificultad">Clase 1</td>
-            <td data-label="Tiempo">4 h</td>
-            <td data-label="Altitud">3,200 msnm</td>
-          </tr>
-          <tr>
-            <td data-label="Ruta">Cumbre Altamira</td>
-            <td data-label="Distancia">16 km</td>
-            <td data-label="Dificultad">Clase 2</td>
-            <td data-label="Tiempo">8 h</td>
-            <td data-label="Altitud">4,150 msnm</td>
-          </tr>
-        </tbody>
-      </table>
+      <h3 class="tabla-titulo">Rutas disponibles en el Parque Nacional Altamira</h3>
+      <div id="rutas-container">
+        <!-- Las rutas se cargarán dinámicamente desde la base de datos -->
+        <p>Cargando rutas...</p>
+      </div>
     </div>
   </section>
 
@@ -223,8 +191,8 @@
 
   <section id="registro" class="contact-us-section">
     <div class="container">
-      <h2>Registro de Usuario</h2>
-      <p>Por favor, completa tus datos para registrarte.</p>
+      <h2>Registro y Reserva de Visita</h2>
+      <p>Completa tus datos para registrarte y planificar tu visita al Parque Nacional Altamira.</p>
 
       <form class="formulario-registro" id="registroForm">
         <div class="form-row">
@@ -240,6 +208,12 @@
         </div>
 
         <div class="form-row">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+          <div class="error-message" id="error-telefono"></div>
+        </div>
+
+        <div class="form-row">
           <label for="password">Contraseña</label>
           <input type="password" id="password" name="password" placeholder="Tu contraseña">
           <div class="error-message" id="error-password"></div>
@@ -251,76 +225,51 @@
           <div class="error-message" id="error-confirmPassword"></div>
         </div>
 
+        <div class="form-row">
+          <label for="fechaVisita">Fecha de visita</label>
+          <input type="date" id="fechaVisita" name="fechaVisita">
+          <div class="error-message" id="error-fechaVisita"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="horaVisita">Hora de entrada</label>
+          <input type="time" id="horaVisita" name="horaVisita" min="07:00" max="16:00">
+          <div class="error-message" id="error-horaVisita"></div>
+        </div>
+
+        <div class="form-row">
+          <label for="numeroVisitantes">Número de visitantes</label>
+          <input type="number" id="numeroVisitantes" name="numeroVisitantes" min="1" max="20" step="1" placeholder="Núm. visitantes">
+          <div class="error-message" id="error-numeroVisitantes"></div>
+        </div>
+
+        <div class="form-row select-row">
+          <label for="rutaPreferida">Ruta preferida</label>
+          <select id="rutaPreferida" name="rutaPreferida">
+            <option value="">SELECCIONA RUTA PREFERIDA</option>
+            <option value="mirador">Mirador del Cóndor (Fácil)</option>
+            <option value="canyon">Cañón del Río Claro (Moderado)</option>
+            <option value="cumbre">Cumbre Altamira (Difícil)</option>
+          </select>
+          <div class="error-message" id="error-rutaPreferida"></div>
+        </div>
+
+        <div class="form-row checkbox-row">
+          <input type="checkbox" id="requiereGuia" name="requiereGuia" value="si">
+          <label for="requiereGuia">Requiero guía certificado (+$100 MXN)</label>
+        </div>
+
         <div class="form-row checkbox-row">
           <input type="checkbox" id="terminos" name="terminos">
           <label for="terminos">Acepto los términos y condiciones</label>
           <div class="error-message" id="error-terminos"></div>
         </div>
 
-        <button type="submit">Registrarse</button>
+        <button type="submit">Registrarse y Reservar Visita</button>
       </form>
     </div>
   </section>
 
-  <section id="contacto" class="contact-us-section">
-    <div class="container">
-      <h2>Reserva tu visita guiada</h2>
-      <p>Selecciona fecha, hora y tus preferencias. Te contactaremos para confirmar.</p>
-
-      <form class="signup-form">
-        <div class="form-row">
-          <label for="nombre" class="sr-only">Nombre completo</label>
-          <input id="nombre" name="nombre" placeholder="NOMBRE COMPLETO" required>
-        </div>
-
-        <div class="form-row">
-          <label for="email" class="sr-only">Correo electrónico</label>
-          <input type="email" id="email" name="email" placeholder="TU EMAIL" required>
-        </div>
-
-        <div class="form-row">
-          <label for="telefono" class="sr-only">Teléfono</label>
-          <input type="tel" id="telefono" name="telefono" placeholder="TELÉFONO">
-        </div>
-
-        <div class="form-row">
-          <label for="fecha" class="sr-only">Fecha de visita</label>
-          <input type="date" id="fecha" name="fecha" required>
-        </div>
-
-        <div class="form-row">
-          <label for="hora" class="sr-only">Hora de entrada</label>
-          <input type="time" id="hora" name="hora" min="07:00" max="16:00" required>
-        </div>
-
-        <div class="form-row">
-          <label for="visitantes" class="sr-only">Número de visitantes</label>
-          <input type="number" id="visitantes" name="visitantes" min="1" max="20" step="1" placeholder="NÚM. VISITANTES" required>
-        </div>
-
-        <div class="form-row select-row">
-          <label for="ruta" class="sr-only">Ruta preferida</label>
-          <select id="ruta" name="ruta" required>
-            <option value="" disabled selected>RUTA PREFERIDA</option>
-            <option value="mirador">Mirador del Cóndor (Fácil)</option>
-            <option value="canyon">Cañón del Río Claro (Moderado)</option>
-            <option value="cumbre">Cumbre Altamira (Difícil)</option>
-          </select>
-        </div>
-
-        <div class="form-row checkbox-row">
-          <input type="checkbox" id="guia" name="guia" value="si">
-          <label for="guia">Requiero guía certificado (+$100 MXN)</label>
-        </div>
-
-        <button type="submit">RESERVAR</button>
-      </form>
-
-      <p class="small-note">
-        Al reservar, aceptas nuestro <a href="#">reglamento de acceso</a> y políticas de cancelación (48h de anticipación).
-      </p>
-    </div>
-  </section>
 
   <footer class="site-footer">
     <div class="container">
@@ -366,24 +315,42 @@
     const datos = {
         nombreCompleto: '',
         email: '',
+        telefono: '',
         password: '',
         confirmPassword: '',
+        fechaVisita: '',
+        horaVisita: '',
+        numeroVisitantes: '',
+        rutaPreferida: '',
+        requiereGuia: false,
         terminos: false
     }
     
     // Seleccionar los elementos del formulario
     const nombreCompleto = document.querySelector('#nombreCompleto');
     const emailForm = document.querySelector('#email');
+    const telefono = document.querySelector('#telefono');
     const password = document.querySelector('#password');
     const confirmPassword = document.querySelector('#confirmPassword');
+    const fechaVisita = document.querySelector('#fechaVisita');
+    const horaVisita = document.querySelector('#horaVisita');
+    const numeroVisitantes = document.querySelector('#numeroVisitantes');
+    const rutaPreferida = document.querySelector('#rutaPreferida');
+    const requiereGuia = document.querySelector('#requiereGuia');
     const terminos = document.querySelector('#terminos');
     const formulario = document.querySelector('#registroForm');
     
     // Agregar eventos de escucha para los campos del formulario
     if(nombreCompleto) nombreCompleto.addEventListener('input', leerInputs);
     if(emailForm) emailForm.addEventListener('input', leerInputs);
+    if(telefono) telefono.addEventListener('input', leerInputs);
     if(password) password.addEventListener('input', leerInputs);
     if(confirmPassword) confirmPassword.addEventListener('input', leerInputs);
+    if(fechaVisita) fechaVisita.addEventListener('input', leerInputs);
+    if(horaVisita) horaVisita.addEventListener('input', leerInputs);
+    if(numeroVisitantes) numeroVisitantes.addEventListener('input', leerInputs);
+    if(rutaPreferida) rutaPreferida.addEventListener('change', leerInputs);
+    if(requiereGuia) requiereGuia.addEventListener('change', leerInputs);
     if(terminos) terminos.addEventListener('change', leerInputs);
     
     // Evento para el submit del formulario
@@ -403,18 +370,33 @@
                 return;
             }
             
-            // Si no hay errores, simular envío exitoso
-            mostrarAlerta('¡Usuario registrado correctamente!', false);
+            // Si no hay errores, enviar el formulario
+            const formData = new FormData(formulario);
             
-            // Opcional: Resetear el formulario después de un registro exitoso
-            formulario.reset();
-            // Resetear el objeto de datos
-            Object.keys(datos).forEach(key => {
-                if (typeof datos[key] === 'boolean') {
-                    datos[key] = false;
+            // Enviar los datos al servidor
+            fetch('procesar_registro.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.success) {
+                    mostrarAlerta('¡Usuario registrado y visita reservada correctamente!', false);
+                    formulario.reset();
+                    // Resetear el objeto de datos
+                    Object.keys(datos).forEach(key => {
+                        if (typeof datos[key] === 'boolean') {
+                            datos[key] = false;
+                        } else {
+                            datos[key] = '';
+                        }
+                    });
                 } else {
-                    datos[key] = '';
+                    mostrarAlerta('Error: ' + data.message, true);
                 }
+            })
+            .catch(error => {
+                mostrarAlerta('Error al enviar el formulario. Por favor, inténtelo de nuevo.', true);
             });
         });
     }
@@ -446,6 +428,14 @@
             errores.email = 'Por favor ingrese un correo electrónico válido';
         }
         
+        // Validar teléfono (si se proporciona, debe tener formato válido)
+        if (datos.telefono && datos.telefono.trim() !== '') {
+            const telefonoRegex = /^[0-9\-\+\(\)\s]+$/;
+            if (!telefonoRegex.test(datos.telefono)) {
+                errores.telefono = 'Por favor ingrese un número de teléfono válido';
+            }
+        }
+        
         // Validar contraseña (mínimo 8 caracteres)
         if (!datos.password || datos.password.trim() === '') {
             errores.password = 'La contraseña es obligatoria';
@@ -458,6 +448,35 @@
             errores.confirmPassword = 'Debe confirmar la contraseña';
         } else if (datos.password !== datos.confirmPassword) {
             errores.confirmPassword = 'Las contraseñas no coinciden';
+        }
+        
+        // Validar fecha de visita (requerido)
+        if (!datos.fechaVisita || datos.fechaVisita.trim() === '') {
+            errores.fechaVisita = 'La fecha de visita es obligatoria';
+        } else {
+            // Verificar que la fecha no sea anterior a hoy
+            const fechaActual = new Date();
+            const fechaSeleccionada = new Date(datos.fechaVisita);
+            if (fechaSeleccionada < fechaActual.setHours(0, 0, 0, 0)) {
+                errores.fechaVisita = 'La fecha de visita no puede ser anterior a hoy';
+            }
+        }
+        
+        // Validar hora de visita (requerido)
+        if (!datos.horaVisita || datos.horaVisita.trim() === '') {
+            errores.horaVisita = 'La hora de visita es obligatoria';
+        }
+        
+        // Validar número de visitantes (requerido, entre 1 y 20)
+        if (!datos.numeroVisitantes || datos.numeroVisitantes.trim() === '') {
+            errores.numeroVisitantes = 'El número de visitantes es obligatorio';
+        } else if (parseInt(datos.numeroVisitantes) < 1 || parseInt(datos.numeroVisitantes) > 20) {
+            errores.numeroVisitantes = 'El número de visitantes debe estar entre 1 y 20';
+        }
+        
+        // Validar ruta preferida (requerido)
+        if (!datos.rutaPreferida || datos.rutaPreferida.trim() === '') {
+            errores.rutaPreferida = 'Debe seleccionar una ruta preferida';
         }
         
         // Validar aceptar términos y condiciones (checkbox obligatorio)
@@ -498,7 +517,7 @@
         });
         
         // Remover clases de error de los campos
-        const campos = document.querySelectorAll('#registroForm input');
+        const campos = document.querySelectorAll('#registroForm input, #registroForm select');
         campos.forEach(campo => {
             campo.classList.remove('error-campo');
         });
@@ -526,6 +545,67 @@
             alerta.remove();
         }, 3000);
     }
+    
+    // Cargar rutas desde la base de datos
+    async function cargarRutas() {
+        try {
+            const response = await fetch('obtener_rutas.php');
+            const rutas = await response.json();
+            
+            const container = document.getElementById('rutas-container');
+            if (rutas.length > 0) {
+                let html = '<div class="ruta-table-container"><table class="ruta-table"><thead><tr><th scope="col">Ruta</th><th scope="col">Locación</th><th scope="col">Dificultad</th><th scope="col">Rating</th></tr></thead><tbody>';
+                
+                rutas.forEach(ruta => {
+                    // Convertir dificultad numérica a texto
+                    let dificultadTexto = '';
+                    switch(ruta.dificultad) {
+                        case '0':
+                            dificultadTexto = 'Clase 0 (Fácil)';
+                            break;
+                        case '1':
+                            dificultadTexto = 'Clase 1 (Moderado)';
+                            break;
+                        case '2':
+                            dificultadTexto = 'Clase 2 (Difícil)';
+                            break;
+                        case '3':
+                            dificultadTexto = 'Clase 3 (Experto)';
+                            break;
+                        default:
+                            dificultadTexto = `Clase ${ruta.dificultad}`;
+                    }
+                    
+                    // Crear estrellas para el rating
+                    let estrellas = '';
+                    for (let i = 0; i < parseInt(ruta.rating); i++) {
+                        estrellas += '★';
+                    }
+                    
+                    html += `<tr>
+                        <td data-label="Ruta">${ruta.nombre}</td>
+                        <td data-label="Locación">${ruta.locacion}</td>
+                        <td data-label="Dificultad">${dificultadTexto}</td>
+                        <td data-label="Rating">${estrellas}</td>
+                    </tr>`;
+                });
+                
+                html += '</tbody></table></div>';
+                container.innerHTML = html;
+            } else {
+                container.innerHTML = '<p>No hay rutas registradas aún.</p>';
+            }
+        } catch (error) {
+            console.error('Error al cargar las rutas:', error);
+            const container = document.getElementById('rutas-container');
+            container.innerHTML = '<p>Error al cargar las rutas. Por favor, inténtelo más tarde.</p>';
+        }
+    }
+    
+    // Cargar las rutas cuando se cargue la página
+    document.addEventListener('DOMContentLoaded', function() {
+        cargarRutas();
+    });
   </script>
 </body>
 </html>
