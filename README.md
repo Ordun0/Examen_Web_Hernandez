@@ -78,3 +78,9 @@ La base de datos `parque_nacional` contiene una tabla llamada `rutas` con la sig
 - `dificultad`: Nivel de dificultad (ENUM 0,1,2,3)
 - `rating`: Calificación de la ruta (ENUM 1,2,3,4,5)
 - `fecha_registro`: Fecha y hora de registro (TIMESTAMP)
+
+También hay una base de datos de usuarios que registra:
+- Nombre
+- Email
+- Mensaje
+
