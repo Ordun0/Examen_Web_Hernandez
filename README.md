@@ -50,6 +50,13 @@ Este sistema web permite gestionar las rutas de escalada del Parque Nacional. Pr
 
 ## Manual de usuario
 
+### Visualizar el sistema completo
+1. Descargar el zip del repositorio
+2. Mover todos los documentos a una carpeta dentro de la carpeta raiz del servidor, en Linux es: '/var/www/html'.
+3. Modificar el archivo 'config.php' con las credenciales correctas de su SQL.
+4. Importar el documento 'crear_base_de_datos.sql' en PHPmyAdmin.
+5. Para modificar la base de datos acceder a "http://localhost/"nombre de la carpeta creada en la raiz"/index.php".
+
 ### Registro de una nueva ruta
 
 1. Navegar a la sección "Registrar Ruta" en la página principal.
